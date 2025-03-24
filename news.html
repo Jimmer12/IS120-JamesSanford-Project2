@@ -1,0 +1,52 @@
+<!-- news.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie News - Movie National Collective</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+  <header>
+    <h1>Movie National Collective</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="news-section">
+      <h2>Latest News</h2>
+      <div id="news-feed"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Movie National Collective</p>
+  </footer>
+
+  <script>
+    // AI Assistance: 2025-03-23 - Prompt: "Add JS to populate news from JSON"
+    const newsData = [
+      { title: "March Screening Announced", date: "2025-03-22", content: "Join us for a weekend marathon of Studio Ghibli classics." },
+      { title: "Director Q&A", date: "2025-03-18", content: "Award-winning director Ava Greene will join us for a live Q&A after the showing of her latest film." },
+      { title: "New Membership Perks", date: "2025-03-15", content: "Members now get discounts at select local theaters and free popcorn on movie nights!" }
+    ];
+
+    const newsFeed = document.getElementById("news-feed");
+    newsData.forEach(item => {
+      const newsItem = document.createElement("div");
+      newsItem.className = "news-item";
+      newsItem.innerHTML = `<h3>${item.title}</h3><p><em>${item.date}</em></p><p>${item.content}</p>`;
+      newsFeed.appendChild(newsItem);
+    });
+  </script>
+</body>
+</html>

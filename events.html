@@ -1,0 +1,83 @@
+<!-- events.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events - Movie National Collective</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Movie National Collective</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <button id="theme-toggle">Toggle Theme</button>
+  </header>
+
+  <main>
+    <section class="video-background">
+      <video autoplay muted loop>
+        <source src="movie_reel.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="video-overlay">
+        <h2>Upcoming Events</h2>
+      </div>
+    </section>
+
+    <section class="event-grid">
+      <div class="event">
+        <h3>March Movie Marathon</h3>
+        <p>Enjoy a full day of sci-fi classics with themed snacks and trivia rounds.</p>
+        <button class="modal-btn" data-modal="modal1">More Info</button>
+      </div>
+      <div class="event">
+        <h3>Director Q&A Night</h3>
+        <p>Live session with filmmaker Ava Greene. Get your questions ready!</p>
+        <button class="modal-btn" data-modal="modal2">More Info</button>
+      </div>
+      <div class="event">
+        <h3>Silent Film Soirée</h3>
+        <p>A live pianist accompanies a curated selection of silent film gems.</p>
+        <button class="modal-btn" data-modal="modal3">More Info</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modals -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <span class="close" data-close="modal1">&times;</span>
+      <h3>March Movie Marathon</h3>
+      <p>Starts at 10am, includes breaks, games, and surprise guest speakers!</p>
+    </div>
+  </div>
+  <div id="modal2" class="modal">
+    <div class="modal-content">
+      <span class="close" data-close="modal2">&times;</span>
+      <h3>Director Q&A Night</h3>
+      <p>Taking place at the downtown theatre, reserve your seat online!</p>
+    </div>
+  </div>
+  <div id="modal3" class="modal">
+    <div class="modal-content">
+      <span class="close" data-close="modal3">&times;</span>
+      <h3>Silent Film Soirée</h3>
+      <p>Dress up encouraged. Tickets include drink and snack vouchers.</p>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Movie National Collective</p>
+  </footer>
+</body>
+</html>
